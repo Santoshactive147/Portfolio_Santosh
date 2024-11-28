@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Query Messages{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Query Messages</h1>
+    
+    {% if messages %}
+        <table class="query-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                    <th>Submitted On</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for message in messages %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ message.name }}</td>
+                        <td><a href="mailto:{{ message.email }}">{{ message.email }}</a></td>
+                        <td>{{ message.message }}</td>
+                        <td>{{ message.timestamp|date:"Y-m-d H:i:s" }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No messages received yet.</p>
+    {% endif %}
+</div>
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'querymessages.css' %}">
+{% endblock %}

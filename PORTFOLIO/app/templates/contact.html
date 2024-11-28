@@ -16,7 +16,8 @@
     </div>
 
     <h2>Send a Message</h2>
-    <form action="#" method="POST">
+    <form action="{% url 'contact' %}" method="POST">
+        {% csrf_token %}
         <label for="user_message">Your Message:</label>
         <textarea id="user_message" name="message" rows="6" placeholder="Write your message here..."></textarea>
 
@@ -31,7 +32,7 @@
 </div>
 
 <div class="footer">
-    <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    <p>&copy; 2024 Active neurons LLP . All rights reserved.</p>
 </div>
 
     {% load static %}

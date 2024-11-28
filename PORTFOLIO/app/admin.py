@@ -26,3 +26,17 @@ class ProjectAdmin(admin.ModelAdmin):
 
 # Register the model with the custom admin class
 admin.site.register(Project, ProjectAdmin)
+
+
+
+
+
+from django.contrib import admin
+from .models import QueryMessages
+
+@admin.register(QueryMessages)
+class QueryMessagesAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'timestamp')
+    search_fields = ('name', 'email', 'message')
+    list_filter = ('timestamp',)
+    ordering = ('-timestamp',)

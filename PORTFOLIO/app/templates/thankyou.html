@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Message Received - Thank You!{% endblock %}
+
+{% block content %}
+<section id="thank-you">
+    <h2>Thank You!</h2>
+    <p>Your message has been successfully sent. I will review it and get back to you as soon as possible.</p>
+    <p>Meanwhile, you can explore more about me or my work:</p>
+    
+    <div class="navigation-links">
+        <a href="{% url 'portfolio' %}" class="btn">View My Portfolio</a>
+        <a href="{% url 'about' %}" class="btn">Learn About Me</a>
+        <a href="{% url 'contact' %}" class="btn">Contact Me Again</a>
+    </div>
+</section>
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'thank_you.css' %}">
+{% endblock %}

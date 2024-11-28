@@ -1,0 +1,45 @@
+.container {
+    margin: 20px auto;
+    max-width: 800px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.query-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+.query-table th, .query-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.query-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.query-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.query-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.query-table a {
+    color: #4CAF50;
+    text-decoration: none;
+}
