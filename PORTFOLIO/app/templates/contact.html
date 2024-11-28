@@ -1,0 +1,39 @@
+<!-- contact.html -->
+
+
+<!-- portfolio/templates/portfolio/add_project.html -->
+{% extends 'base.html' %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="contact-info">
+        <p>If you have any questions, concerns, or inquiries, feel free to get in touch with me. I'm here to help!</p>
+        <p><strong>Mobile Number:</strong> <a href="tel:+918108642185">+91 8108642185</a></p>
+        <p><strong>Email:</strong> <a href="mailto:santoshmudhiraj81@gmail.com">santoshmudhiraj81@gmail.com</a></p>
+        <p>Looking forward to hearing from you!</p>
+    </div>
+
+    <h2>Send a Message</h2>
+    <form action="#" method="POST">
+        <label for="user_message">Your Message:</label>
+        <textarea id="user_message" name="message" rows="6" placeholder="Write your message here..."></textarea>
+
+        <label for="user_name">Your Name:</label>
+        <input type="text" id="user_name" name="name" placeholder="Enter your name" required>
+
+        <label for="user_email">Your Email:</label>
+        <input type="email" id="user_email" name="email" placeholder="Enter your email" required>
+
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+<div class="footer">
+    <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+</div>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'contact.css' %}">
+{% endblock %}

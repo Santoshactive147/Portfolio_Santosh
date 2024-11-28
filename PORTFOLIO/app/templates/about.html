@@ -1,0 +1,52 @@
+<!-- portfolio/templates/portfolio/about.html -->
+{% extends "base.html" %}
+
+{% block title %}About - Santosh{% endblock %}
+
+{% block content %}
+<div class="about-page">
+    <h2>About Me</h2>
+    <p class="intro">
+        Hi there! I’m <strong>Santosh</strong>, a passionate <strong>Python Django Developer</strong> with a knack for building robust web applications and APIs. 
+        I specialize in designing scalable solutions that combine clean code with intuitive user experiences.
+    </p>
+
+    <div class="expertise-section">
+        <h3>My Expertise</h3>
+        <p>
+            I have a diverse skill set that spans both front-end and back-end development. Here's a quick overview of what I bring to the table:
+        </p>
+        <ul class="skills-list">
+            <li><strong>Backend Development:</strong> Python, Django, Django REST Framework (DRF)</li>
+            <li><strong>Frontend Development:</strong> HTML, CSS, JavaScript</li>
+            <li><strong>Database Management:</strong> PostgreSQL, MySQL, SQLite</li>
+            <li><strong>Other Skills:</strong> Version Control (Git), API Development</li>
+        </ul>
+    </div>
+
+    <div class="philosophy-section">
+        <h3>My Philosophy</h3>
+        <blockquote>
+            "Code should be simple, efficient, and impactful."
+        </blockquote>
+        <p>
+            I aim to create web applications that are not only functional but also delightful to use. Whether it's architecting powerful APIs with DRF or crafting elegant front-end designs, 
+            my focus remains on solving real-world challenges through thoughtful development.
+        </p>
+    </div>
+
+    <div class="personal-section">
+        <h3>Beyond Coding</h3>
+        <p>
+            When I'm not immersed in lines of code, I enjoy:
+        </p>
+        <ul class="hobbies-list">
+            <li>Exploring the latest trends in technology and development tools</li>
+            <li>Reading articles and books about software engineering and design patterns</li>
+            <li>Contributing to open-source projects that make a difference</li>
+        </ul>
+    </div>
+</div>
+{% load static %}
+<link rel="stylesheet" href="{% static 'about.css' %}">
+{% endblock %}
